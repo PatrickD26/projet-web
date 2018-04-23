@@ -10,7 +10,26 @@
         <h2>Que la force vous guide</h2>
     </header>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}
+            <form action="/validation">
+
+                <div>
+                <input type="radio" value="Monsieur" id="buttonMonsieur" required>Madame
+                <input type="radio" value="Madame" id="buttonMadame"required>Monsieur
+                </div>
+
+                Nom : <input type="text" id="nomClient" required><br>
+                Prénom : <input type="text" id="prenomClient"required><br>
+
+                    Nom de la société : <input type="text" id="societeClient"required><br>
+                    Poste occupé : <input type="text" id="posteClient"required><br>
+
+                Adresse 1 : <input type="text" id="adresseClient"required><br>
+                Adresse 2 : <input type="text" id="adresse2Client"required><br>
+                Code postal : <input type="text" id="codePostalClient" required><br>
+                Ville : <input type="select" id="villeClient" required><br>
+            </form>
+        {% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
