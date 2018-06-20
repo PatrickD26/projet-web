@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class CustomerController extends Controller
 {
   /**
-   * @Route("/form/{status}", name="form_page")
+   * @Route("/form/{status}/{guid}", name="form_page")
    */
   public function formAction($status)
   {
