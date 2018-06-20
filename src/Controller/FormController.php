@@ -14,9 +14,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 
 class FormController extends Controller
-{
 
+{
     public function index(){
         return $this->render('formulaire.html.twig');
+    }
+
+    public function completed(){
+        return $this->render('form-already-completed.html.twig');
     }
 }
