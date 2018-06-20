@@ -25,10 +25,16 @@ class CustomerProType extends CustomerBaseType
       ])
       ->add('position', TextType::class, [
         'label' => 'Poste occupé',
-
         'required' => true
       ])
-      ->add('compan');
+      ->add('companyPhone', TextType::class, [
+        'label' => 'Téléphone société',
+        'required' => true
+      ])
+      ->add('directLine', TextType::class, [
+        'label' => 'Téléphone direct',
+        'required' => true
+      ]);
   }
 
   public function configureOptions(optionResolver $resolver)
