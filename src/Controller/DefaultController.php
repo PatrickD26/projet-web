@@ -24,13 +24,9 @@ class DefaultController extends Controller
     }
 
     $name = $customer->getName();
-    $email = $customer->getEmail();
-    $isSociety = $customer->getIsSociety();
 
     return $this->render('index.html.twig', array(
-      'name' => $name,
-      'email' => $email,
-      'isSociety' => $isSociety,
+      'name' => $name
     ));
   }
 }

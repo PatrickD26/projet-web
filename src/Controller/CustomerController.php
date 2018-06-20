@@ -4,39 +4,55 @@ namespace App\Controller;
 
 use App\Entity\CustomerPart;
 use App\Entity\CustomerPro;
-use App\Form\CustomerPartType;
-use App\Form\CustomerProType;
+use FOS\RestBundle\Controller\Annotations as Rest;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class CustomerController extends Controller
 {
   /**
-   * @Route("/form/{isSociety}", name="form_page")
+   * @Route("/form/{guid}}", name="form_page")
    */
-  public function formAction($isSociety, Request $request)
+  public function formAction($guid)
   {
-    if( $isSociety ) {
-      $customer = new CustomerPro();
-      $form = $this->createForm(CustomerProType::class, $customer);
-    } else {
-      $customer = new CustomerPart();
-      $form = $this->createForm(CustomerPartType::class, $customer);
+    $customer = $this
+      ->getDoctrine()
+      ->getManager()
+      ->getRepository(Guid::class)
+      ->findOneBy($guid);
+
+    if( null === $guid ) {
+      // --- Exception
     }
 
-    $form->handleRequest($request);
-    if( $form->isSubmitted() && $form->isValid() ) {
-      $entityManager = $this->getDoctrine()->getManager();
-      $entityManager->persist($customer);
-      $entityManager->flush();
-
-      return $this->redirectToRoute('route');
-    }
+    $name = $customer->getName();
+    $email = $customer->getEmail();
+    $isSociety = $customer->getIsSociety();
 
     return $this->render(
       'formulaire.html.twig',
-      [ 'form' => $form->createView() ]
+      [
+        'name' => $name,
+        'email' => $email,
+        'isSociety' => $isSociety
+      ]
     );
+  }
+
+  /**
+   * @Rest\View()
+   * @Rest\Post("/customers")
+   */
+  public function postCustomerAction(Request $request)
+  {
+    return [
+      'payload' => [
+        $request->get('name'),
+        $request->get('address')
+      ]
+    ];
   }
 }
