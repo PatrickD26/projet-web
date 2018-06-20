@@ -1,0 +1,26 @@
+.col-lg-2 {
+    background-color: gray;
+}
+
+.col-lg-8 {
+    background-color: black;
+    color: white;
+
+}
+
+h4 {
+    margin-bottom: 1.5em;
+}
+body{
+    background-color: black;
+    color:white;
+}
+
+img {
+    margin-bottom: 3em;
+}
+
+#toForm {
+    margin-top: 1em;
+    margin-bottom: 0.9em;
+}
