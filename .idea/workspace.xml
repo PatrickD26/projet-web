@@ -181,9 +181,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
-    <option name="width" value="980" />
-    <option name="height" value="1030" />
+    <option name="x" value="949" />
+    <option name="width" value="981" />
+    <option name="height" value="1031" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -238,10 +238,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="SearchEverywhereHistoryKey" value="rout&#9;FILE&#9;file://C:/wamp64/www/projet-web/projet-web/config/routes.yaml&#10;compo&#9;FILE&#9;file://C:/wamp64/www/projet-web/projet-web/composer.json&#10;controller&#9;null&#9;null&#10;routing&#9;FILE&#9;file://C:/wamp64/www/projet-web/projet-web/config/packages/dev/routing.yaml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../talent_collaboratif" />
-    <property name="SearchEverywhereHistoryKey" value="rout&#9;FILE&#9;file://C:/wamp64/www/projet-web/projet-web/config/routes.yaml&#10;compo&#9;FILE&#9;file://C:/wamp64/www/projet-web/projet-web/composer.json&#10;controller&#9;null&#9;null&#10;routing&#9;FILE&#9;file://C:/wamp64/www/projet-web/projet-web/config/packages/dev/routing.yaml" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -254,9 +255,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
