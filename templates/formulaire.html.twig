@@ -13,8 +13,130 @@
                 <img src="../assets/img/ConnectLife.PNG">
             </div>
             <div class="row offset-lg-3">
+                <div class="col-lg-3">
+                    <label for="name">Nom: </label>
+                </div>
+                <div class="offset-lg-1 col-lg-3">
+                    <input type="text" id="name">
+                </div>
 
+            </div>
 
+            <div class="row offset-lg-3">
+                <div class="col-lg-3">
+                    <label for="surname">Prénom: </label>
+                </div>
+                <div class="offset-lg-1 col-lg-3">
+                    <input type="text" id="surname">
+                </div>
+
+            </div>
+            {% if isSociete == 0 %}
+                <div class="row offset-lg-3">
+                    <div class="col-lg-3">
+                        <label for="companyName">Nom de la société: </label>
+                    </div>
+                    <div class="offset-lg-1 col-lg-3">
+                        <input type="text" id="companyName">
+                    </div>
+
+                </div>
+
+                <div class="row offset-lg-3">
+                    <div class="col-lg-3">
+                        <label for="posteOccupe">Poste occupé: </label>
+                    </div>
+                    <div class="offset-lg-1 col-lg-3">
+                        <input type="text" id="posteOccupe">
+                    </div>
+
+                </div>
+            {% endif %}
+            <div class="row offset-lg-3">
+                <div class="col-lg-3">
+                    <label for="adress1">Adresse 1: </label>
+                </div>
+                <div class="offset-lg-1 col-lg-3">
+                    <input type="text" id="adress1">
+                </div>
+
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-lg-3">
+                    <label for="adress2">Adresse 2: </label>
+                </div>
+                <div class="offset-lg-1 col-lg-3">
+                    <input type="text" id="adress2">
+                </div>
+
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-lg-3">
+                    <label for="postalCode">Code postal: </label>
+                </div>
+                <div class="offset-lg-1 col-lg-3">
+                    <input type="text" id="postalCode">
+                </div>
+
+            </div>
+            <div class="row offset-lg-3">
+                <div class="col-lg-3">
+                    <label for="city">Ville: </label>
+                </div>
+                <div class="offset-lg-1 col-lg-3">
+                    <input type="text" id="city">
+                </div>
+
+            </div>
+            {% if isSociete == 0 %}
+                <div class="row offset-lg-3">
+                    <div class="col-lg-3">
+                        <label for="companyPhone">Téléphone de la société: </label>
+                    </div>
+                    <div class="offset-lg-1 col-lg-3">
+                        <input type="text" id="companyPhone">
+                    </div>
+
+                </div>
+
+                <div class="row offset-lg-3">
+                    <div class="col-lg-3">
+                        <label for="directPhone">Téléphone direct: </label>
+                    </div>
+                    <div class="offset-lg-1 col-lg-3">
+                        <input type="text" id="directPhone">
+                    </div>
+
+                </div>
+            {% endif %}
+            {% if isSociete == 1 %}
+                <div class="row offset-lg-3">
+                    <div class="col-lg-3">
+                        <label for="personalPhone">Téléphone fixe: </label>
+                    </div>
+                    <div class="offset-lg-1 col-lg-3">
+                        <input type="text" id="personalPhone">
+                    </div>
+
+                </div>
+
+                <div class="row offset-lg-3">
+                    <div class="col-lg-3">
+                        <label for="mobilePhone">Téléphone mobile: </label>
+                    </div>
+                    <div class="offset-lg-1 col-lg-3">
+                        <input type="text" id="mobilePhone">
+                    </div>
+
+                </div>
+            {% endif %}
+            <div class="row offset-lg-3">
+                <div class="col-lg-3">
+                    <label for="email">Email: </label>
+                </div>
+                <div class="offset-lg-1 col-lg-3">
+                    <input type="text" id="email">
+                </div>
 
             </div>
 
