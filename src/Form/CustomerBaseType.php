@@ -4,7 +4,7 @@ namespace App\Form;
 
 use App\Entity\CustomerBase;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -21,9 +21,12 @@ abstract class CustomerBaseType extends AbstractTyppe
   public function buildForm(FormBuilderInterface $builder, array $options)
   {
     $builder
-      ->add('civility', CheckboxType::class, [
+      ->add('civility', ChoiceType::class, [
         'label' => 'Civilité',
-        'required' => true
+        'required' => true,
+        'choices' => [ 'Madame', 'Monsieur' ],
+        'expanded' => true,
+        'multiple' => false
       ])
       ->add('lastName', TextType::class, [
         'label' => 'Nom',
@@ -44,7 +47,8 @@ abstract class CustomerBaseType extends AbstractTyppe
       ->add('email', EmailType::class, [
         'label' => 'email',
         'required' => true
-      ]);
+      ])
+      ->add('save', SubmitType::class);
   }
 
   public function configureOptions(optionResolver $resolver)

@@ -9,10 +9,28 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends Controller
 {
   /**
-   * @Route("/", name="home_page")
+   * @Route("/{guid}", name="home_page")
    */
-  public function indexAction()
+  public function indexAction($guid)
   {
-    return $this->render('index.html.twig', array());
+    $customer = $this
+      ->getDoctrine()
+      ->getManager()
+      ->getRepository(Guid::class)
+      ->findOneBy($guid);
+
+    if( null === $guid ) {
+      // --- Exception
+    }
+
+    $name = $customer->getName();
+    $email = $customer->getEmail();
+    $isSociety = $customer->getIsSociety();
+
+    return $this->render('index.html.twig', array(
+      'name' => $name,
+      'email' => $email,
+      'isSociety' => $isSociety,
+    ));
   }
 }
