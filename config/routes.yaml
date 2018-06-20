@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 index:
    path: /
    controller: App\Controller\FormController::index
@@ -7,6 +6,4 @@ index:
 formAlreadyFilled:
   path: /completedError
   controller: App\Controller\FormController::completed
-=======
 
->>>>>>> df5e647a691286795f6a5389659fd82a7b73c792
