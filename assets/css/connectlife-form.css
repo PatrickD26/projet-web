@@ -1,4 +1,14 @@
 body{
     background-color:black;
-    white:color;
+   color:white;
+}
+.formEntry{
+    margin-bottom:10px;
+    margin-top: 10px;
+}
+input{
+    background-color:black;
+    color: white;
+    border-color:white;
+    border-width:3px;
 }

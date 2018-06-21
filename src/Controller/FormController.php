@@ -17,7 +17,7 @@ class FormController extends Controller
 
 {
     public function index(){
-        return $this->render('formulaire.html.twig');
+        return $this->render('formulaire-particulier.html');
     }
 
     public function completed(){

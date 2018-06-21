@@ -14,30 +14,21 @@ use Symfony\Component\Routing\Annotation\Route;
 class CustomerController extends Controller
 {
   /**
-   * @Route("/form/{guid}}", name="form_page")
+   * @Route("/form", name="form_page")
    */
-  public function formAction($guid)
+  public function formAction()
   {
-    $customer = $this
-      ->getDoctrine()
-      ->getManager()
-      ->getRepository(Guid::class)
-      ->findOneBy($guid);
 
-    if( null === $guid ) {
-      // --- Exception
-    }
-
-    $name = $customer->getName();
-    $email = $customer->getEmail();
-    $isSociety = $customer->getIsSociety();
+    $name = "Patrick";
+    $email = "adressemail";
+    $isSociete = 0;
 
     return $this->render(
-      'formulaire.html.twig',
+      'formulaire-particulier.html',
       [
         'name' => $name,
         'email' => $email,
-        'isSociety' => $isSociety
+        'isSociete' => $isSociete
       ]
     );
   }
